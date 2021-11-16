@@ -1,4 +1,4 @@
-import Icono from "./CartWidget";
+import CartWidget from "./CartWidget";
 
 function NavBar() {
     return (
@@ -23,7 +23,7 @@ function NavBar() {
                 <a className="nav-link">Contacto</a>
               </li>
               <li>
-                <Icono/>
+                <CartWidget/>
               </li>
             </ul>
           </div>
