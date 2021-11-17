@@ -1,12 +1,11 @@
-import ItemListContainer from "./ItemListContainer";
-
-let dataItems= true;
+const {itemList} = require ('./itemList')
+let is_ok = false;
 
 let getData = () =>{
     return new Promise((resolve, reject) =>{
-        if (dataItems) {
+        if (is_ok) {
             setTimeout(() => {
-                resolve (ItemListContainer)
+                resolve (itemList);
             }, 2000)
         } else reject("error")
     })

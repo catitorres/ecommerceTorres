@@ -49,4 +49,6 @@ const itemList = [
     },
 
 ];
-export default itemList;
+module.export = {
+    itemList,
+}
