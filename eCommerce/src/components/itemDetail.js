@@ -1,20 +1,17 @@
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ( { dat }) => {
+const ItemDetail = ( { item }) => {
     return( 
-        <>
-        {
-            dat.image
-            ?
+                
+
             <>
-            <img src={dat.image[0]} alt={dat.titulo} className="imageCandles"/>
-            <h1> {dat.titulo} </h1>
-            <p> {dat.description} </p>
+            <img src={item.image} alt={item.titulo} />
+            <h1> {item.titulo} </h1>
+            <p> {item.description} </p>
             <ItemCount stock={100} initial={1}/>
             </>
-            : <p>cargando...</p>
-        }
-        </>
+            
+
     )
 }
 

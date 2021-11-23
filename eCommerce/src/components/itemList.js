@@ -1,28 +1,14 @@
-import { data } from "./data";
-import ItemCount from "./ItemCount";
+import Item from "./item";
 
-const ItemList = () => {
-    return(
-        <>
-        {
-            data.map((dat) =>
-            <div className="tarjetasFlex">
-                <div className="tarjetasServicios media">
-                    <img src={dat.image} alt={dat.titulo} className="mr-3"/>
-                    <br/>
-                    <h3 className="produTitulo">{dat.titulo}</h3>
-                    <br/>
-                    <p className=" precioText">${dat.precio}</p>
-                    <ItemCount stock={100} initial={1}/>
-                    <br/>
-                    <br/>
-                    <button className="botones"> Add to cart</button>
-                    <button className="botones"> Details</button>
-                </div>
-            </div>
-            )
-        }
-        </>
-    )
+const ItemList = ({ items }) => {
+    return (
+        <div className="tarjetasFlex">
+            { items.length > 0 ? (
+                items.map((item) => <Item key={item.id} {...item} />)
+            ) : (
+                <p>Cargando...</p>
+            )}
+        </div>
+    );
 };
 export default ItemList;

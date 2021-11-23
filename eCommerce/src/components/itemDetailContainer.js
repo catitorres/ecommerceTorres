@@ -8,12 +8,12 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         customFetch(2000, data)
-            .then(result => setDato(result))
-            .catch(err => console.log(err))
+            .then((result) => setDato(result))
+            .catch((err) => console.log(err))
     }, []);
     
     return (
-        <ItemDetail dat={dato} />
+        <ItemDetail item={dato} />
     );
 }
 

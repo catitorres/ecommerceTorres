@@ -10,13 +10,14 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     customFetch(2000, data)
-    .then ((result => setDatos(result))
-    .catch((error => console.log(error))
-  }, [])
+    .then ((result) => setDatos(result))
+    .catch((error) => console.log(error))
+    }, 
+    [])
 
   return (
       <>
-      <ItemList ItemList = {datos}/>
+      <ItemList items = {datos}/>
         
       </>    
     );
