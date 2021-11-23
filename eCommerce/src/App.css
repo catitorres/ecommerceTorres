@@ -1,6 +1,7 @@
 .tituloProduct{
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
+  margin-top: 25px;
 }
 
 .tarjetasFlex {
@@ -17,9 +18,9 @@
   margin: 7%;
   width: 350px;
   border-style: solid;
-  border-color: #ffa424;
+  border-color: #ffb7c3da;
   border-radius: 8px;
-  border-width: 5px;
+  border-width: 2px;
   background-color: white;
   box-shadow: 5px 5px 21px -2px rgba(0, 0, 0, 0.1); }
 
@@ -27,4 +28,20 @@
   margin-left: 20px;
   margin-right: 20px ;
   margin-top: 10px;
+}
+
+button{
+  background-color: #ffb7c3da;
+  border-color: #ffb7c3da;
+  color: rgb(61, 61, 50);
+}
+.precioText{
+  background-color: #ffb7c3da;
+  color: rgb(61, 61, 50);
+}
+.produTitulo{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navColor{
+  background-color: rgb(224, 184, 184);
 }

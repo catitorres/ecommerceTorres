@@ -13,10 +13,10 @@ const ItemCount = (props) =>{
 
     return(
         <>
-            <button onClick={decrement}className="botones btn btn-dark">-</button>
+            <button onClick={decrement}className="botones">-</button>
             {cantidad}
-            <button onClick={increment}className="botones btn btn-dark">+</button>
-            <button className="botones btn btn-dark"> Agregar al carrito</button>
+            <button onClick={increment}className="botones">+</button>
+            
         </>
     );
 }

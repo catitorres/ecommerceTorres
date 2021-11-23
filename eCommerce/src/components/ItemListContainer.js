@@ -1,22 +1,24 @@
-import { useState } from "react";
-import Productos from "./productos";
+import { useEffect, useState } from "react";
+import customFetch from "./customFetch";
+import { data } from "./data";
+import ItemList from "./itemList";
 
-const ItemListContainer = (props) => {
 
-    const [listaProductos] = useState(props.itemListContainer);
-    return (
-        <>
-        {
-           listaProductos.map((producto, index) =>
-           <Productos
-           key= {index} 
-           image= {producto.image}
-           titulo= {producto.titulo}
-           precio= {producto.precio}/>)
-        }
+const ItemListContainer = () => {
+  const [datos, setDatos] = useState([]);
+
+
+  useEffect(() => {
+    customFetch(2000, data)
+    .then ((result => setDatos(result))
+    .catch((error => console.log(error))
+  }, [])
+
+  return (
+      <>
+      <ItemList ItemList = {datos}/>
         
-        </>
-    
+      </>    
     );
   }
 export default ItemListContainer;
